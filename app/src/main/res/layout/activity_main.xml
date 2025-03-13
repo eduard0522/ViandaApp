@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <!-- Imagen de Bienvenida -->
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/fondo"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenidos"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Subtítulo -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comprar tu comida también debe\nser una experiencia."
+        android:textSize="14sp"
+        android:textColor="@color/gray_text"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Botón Crear Cuenta -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#2ECC71"
+        android:text="Crear Cuenta"
+        android:textColor="@color/gray_light"
+        android:textStyle="bold" />
+
+    <!-- Botón Iniciar Sesión -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#2ECC71"
+        android:text="Iniciar Sesión"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <!-- Texto "Omitir" alineado a la derecha -->
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Omitir"
+        android:textSize="14sp"
+        android:textColor="@color/green_primary"
+        android:textStyle="bold"
+        android:gravity="end"/>
+</LinearLayout>
