@@ -1,8 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <!-- Barra Superior -->
     <RelativeLayout
@@ -14,39 +15,33 @@
             android:id="@+id/menuIcon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/menu"/>
+            android:src="@drawable/menu" />
 
         <ImageView
             android:id="@+id/cartIcon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/carro"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/carro" />
     </RelativeLayout>
 
     <!-- Barra de Búsqueda -->
-    <EditText
-        android:id="@+id/searchBar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Busca tus favoritos"
-        android:background="@drawable/seacrch"
-        android:paddingStart="16dp"
-        android:textColor="@color/black"
-        android:textSize="16sp"/>
 
     <!-- Imagen Destacada -->
-    <ImageView
-        android:id="@+id/featuredImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/inicio"
-        android:scaleType="centerCrop"
-        android:layout_marginTop="10dp"/>
 
     <!-- Categorías -->
+
+    <ImageView
+        android:id="@+id/featuredImage"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/inicio" />
+
     <HorizontalScrollView
-        android:layout_width="match_parent"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:scrollbars="none">
 
@@ -56,28 +51,30 @@
             android:orientation="horizontal"
             android:padding="10dp">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hamburguesas"
-                android:background="@drawable/hamburguesas"
-                android:textColor="@color/white"/>
 
-            <Button
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pizzas"
-                android:background="@drawable/Pizzas"
-                android:textColor="@color/white"
-                android:layout_marginStart="10dp"/>
+                android:layout_marginHorizontal="15dp"
+                android:background="@color/green_dark"
+                android:padding="8dp"
+                android:src="@drawable/hamburguesas" />
 
-            <Button
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Perros"
-                android:background="@drawable/perros"
-                android:textColor="@color/white"
-                android:layout_marginStart="10dp"/>
+                android:background="@color/green_primary"
+                android:padding="8dp"
+                android:src="@drawable/pizzas" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:background="@color/green_dark"
+                android:padding="8dp"
+                android:src="@drawable/perros" />
+
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -85,42 +82,52 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recomendados"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="Recomendados"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerRecommended"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"/>
-
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Super descuentos"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"/>
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:padding="8dp"
+            android:src="@drawable/hamburguesas" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:padding="8dp"
+            android:src="@drawable/hamburguesas" />
+
+    </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerDiscounts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"/>
+        android:padding="10dp" />
+
 
     <!-- Bottom Navigation -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:itemIconTint="@color/gray_text"
-        app:itemTextColor="@color/gray_text"
-        app:menu="@menu/bottom_navigation_menu"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Super descuentos"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
 </LinearLayout>
